@@ -34,7 +34,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY')
 DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1']
-
+#Para levantarlo en github dev CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
 
 # Application definition
 
@@ -63,7 +63,7 @@ ROOT_URLCONF = 'onlyflans.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [], #Si no funciona porner os.path.join(BASE_DIR, 'web/templates')
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
