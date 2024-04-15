@@ -1,67 +1,84 @@
-{% extends 'base.html' %}
-
-{% block content %}
-{% load static %}
+{% extends 'base.html' %} {% block content %} {% load static %}
 <!--Destacados-->
 <section id="destacados" class="container p-5">
-    <div class="text-center" style="border-bottom: solid;">
-        <h1>Productos destacados</h1>
+  <div class="text-center" style="border-bottom: solid">
+    <h1>Productos destacados</h1>
+  </div>
+  <div class="row">
+    <!--Por defecto se muestra solo una columna, en dispositivos con tamaño mayor a 576px se muestran 3 columnas-->
+    <div class="col-12 col-lg-3 py-2">
+      <div class="card bg-secondary">
+        <img
+          src="{% static 'img/flan-vainilla.jpg' %}"
+          class="card-img-top"
+          alt="Flan de vainilla"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Flan de vainilla</h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            soluta nam praesentium sit quibusdam odio voluptatum ipsam alias
+            illum atque aperiam error, a quasi aut voluptates molestiae,
+            asperiores, quisquam facilis.
+          </p>
+        </div>
+      </div>
     </div>
-    <div class="row">
-        <!--Por defecto se muestra solo una columna, en dispositivos con tamaño mayor a 576px se muestran 3 columnas-->
-        <div class="col-12 col-sm-3 py-2">
-            <div class="card bg-secondary">
-                <img src="{% static 'img/flan-vainilla.jpg' %}" class="card-img-top" alt="Flan de vainilla">
-                <div class="card-body ">
-                    <h5 class="card-title">Flan de vainilla</h5>
-                    <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta nam praesentium sit
-                        quibusdam odio voluptatum ipsam alias illum atque aperiam error, a quasi aut voluptates
-                        molestiae, asperiores, quisquam facilis.
-                    </p>
-                </div>
-            </div>
+    <div class="col-12 col-lg-3 py-2">
+      <div class="card bg-secondary">
+        <img
+          src="{% static 'img/flan-chocolate.jpg' %}"
+          class="card-img-top"
+          alt="Flan de chocolate"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Flan de chocolate</h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            soluta nam praesentium sit quibusdam odio voluptatum ipsam alias
+            illum atque aperiam error, a quasi aut voluptates molestiae,
+            asperiores, quisquam facilis.
+          </p>
         </div>
-        <div class="col-12 col-sm-3 py-2">
-            <div class="card bg-secondary">
-                <img src="{% static 'img/flan-chocolate.jpg' %}" class="card-img-top" alt="Flan de chocolate">
-                <div class="card-body ">
-                    <h5 class="card-title">Flan de chocolate</h5>
-                    <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta nam praesentium sit
-                        quibusdam odio voluptatum ipsam alias illum atque aperiam error, a quasi aut voluptates
-                        molestiae, asperiores, quisquam facilis.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-3 py-2">
-            <div class="card bg-secondary">
-                <img src="{% static 'img/flan-frutos-rojos.jpg' %}" class="card-img-top" alt="Flan de frutos rojos">
-                <div class="card-body ">
-                    <h5 class="card-title">Flan de frutos rojos</h5>
-                    <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta nam praesentium sit
-                        quibusdam odio voluptatum ipsam alias illum atque aperiam error, a quasi aut voluptates
-                        molestiae, asperiores, quisquam facilis.
-                    </p>
-                </div>
-            </div>
-        </div>
-        <div class="col-12 col-sm-3 py-2">
-            <div class="card bg-secondary">
-                <img src="{% static 'img/flan-coco.jpg' %}" class="card-img-top" alt="Flan de coco">
-                <div class="card-body ">
-                    <h5 class="card-title">Flan de coco</h5>
-                    <p class="card-text">
-                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus soluta nam praesentium sit
-                        quibusdam odio voluptatum ipsam alias illum atque aperiam error, a quasi aut voluptates
-                        molestiae, asperiores, quisquam facilis.
-                    </p>
-                </div>
-            </div>
-        </div>
+      </div>
     </div>
+    <div class="col-12 col-lg-3 py-2">
+      <div class="card bg-secondary">
+        <img
+          src="{% static 'img/flan-frutos-rojos.jpg' %}"
+          class="card-img-top"
+          alt="Flan de frutos rojos"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Flan de frutos rojos</h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            soluta nam praesentium sit quibusdam odio voluptatum ipsam alias
+            illum atque aperiam error, a quasi aut voluptates molestiae,
+            asperiores, quisquam facilis.
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="col-12 col-lg-3 py-2">
+      <div class="card bg-secondary">
+        <img
+          src="{% static 'img/flan-coco.jpg' %}"
+          class="card-img-top"
+          alt="Flan de coco"
+        />
+        <div class="card-body">
+          <h5 class="card-title">Flan de coco</h5>
+          <p class="card-text">
+            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Possimus
+            soluta nam praesentium sit quibusdam odio voluptatum ipsam alias
+            illum atque aperiam error, a quasi aut voluptates molestiae,
+            asperiores, quisquam facilis.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 {% endblock %}
