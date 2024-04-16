@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from web.views import index, about, welcome
+from web.views import index, about, welcome, contact, success
 
 app_name = 'web'
 
@@ -25,4 +25,6 @@ urlpatterns = [
     path('', index, name="index"),
     path('about', about, name="about"),
     path('welcome', welcome, name="welcome"),
+    path('contact', contact, name="contact"),
+    path('success', success, name="success"),
 ]

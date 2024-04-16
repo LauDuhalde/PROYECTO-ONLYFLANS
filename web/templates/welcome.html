@@ -1,16 +1,22 @@
 {% extends 'base.html' %} 
 {% block content %}
-<div class="container">
-  <h1>Bienvenido a OnlyFlans</h1>
-  <p>¡Gracias por visitar nuestra página web!</p>
-  <p>
-    Somos una pyme especializada en la venta de deliciosos pasteles y postres.
-    Nuestro objetivo es ofrecerte los mejores productos de repostería para que
-    disfrutes de momentos dulces e inolvidables.
-  </p>
-  <p>
-    No dudes en explorar nuestra tienda en línea para descubrir una amplia
-    variedad de opciones irresistibles.
-  </p>
-</div>
+  <section id="productos" class="container p-5">
+    <div class="text-center" style="border-bottom: solid">
+      <h1>Bienvenido a OnlyFlans</h1>
+    </div>
+    <div class="row">
+        {% for flan in flanes %}
+        <div class="col-12 col-lg-3 mb-4">
+            <div class="card">
+                <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+                <div class="card-body">
+                    <h5 class="card-title">{{ flan.name }}</h5>
+                    <p class="card-text">{{ flan.description }}</p>
+                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                </div>
+            </div>
+        </div>
+        {% endfor %}
+    </div>
+  </section>
 {% endblock %}

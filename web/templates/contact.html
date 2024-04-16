@@ -1,0 +1,30 @@
+{% extends 'base.html' %} 
+{% block content %} 
+
+<section id="contact" class="container p-5">
+  <h1>Contacto</h1>
+    <form action="/contact" method="post">
+        {% csrf_token %}
+        <div class="mb-3">
+            {{form.customer_email.label_tag}}
+            <br>
+            {{form.customer_email}}
+        </div>
+
+        <div class="mb-3">
+            {{form.customer_name.label_tag}}
+            <br>
+            {{form.customer_name}}
+        </div>
+
+        <div class="mb-3">
+            {{form.message.label_tag}}
+            <br>
+            {{form.message}}
+        </div>
+
+        <button type="submit" class="btn btn-primary">Enviar</button>
+    </form>
+</section>
+
+{% endblock %}
