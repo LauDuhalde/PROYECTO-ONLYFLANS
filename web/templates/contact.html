@@ -1,14 +1,16 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
-<section id="contact" class="container p-5">
+<section id="contact" class="container p- text-center">
   <h1>Contacto</h1>
     <form action="/contact" method="post">
         {% csrf_token %}
+        {{form.non_field_errors}}
         <div class="mb-3">
             {{form.customer_email.label_tag}}
             <br>
             {{form.customer_email}}
+            <div class="text-danger">{{form.customer_email.errors}}</div>
         </div>
 
         <div class="mb-3">
