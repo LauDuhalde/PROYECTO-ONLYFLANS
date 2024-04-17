@@ -1,6 +1,6 @@
 {% extends 'base.html' %} 
 {% block content %}
-  <section id="productos" class="container p-5">
+  <section id="productos" class="container p-5 border rounded">
     <div class="text-center" style="border-bottom: solid">
       <h1>Bienvenido a OnlyFlans</h1>
     </div>
@@ -8,7 +8,7 @@
         {% for flan in flanes %}
         <div class="col-12 col-lg-3 mb-4">
             <div class="card">
-                <img src="{{ flan.image_url }}" class="card-img-top" alt="{{ flan.name }}">
+              <img src="{{ flan.image_url }}" class="card-img-top img-fluid" alt="{{ flan.name }}" style="max-height: 150px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ flan.name }}</h5>
                     <p class="card-text">{{ flan.description }}</p>

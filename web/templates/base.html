@@ -18,13 +18,14 @@
   </head>
 
   <body>
-    {% block 'header' %} 
-    {% include 'includes/header.html' %} 
-    {% endblock %} 
 
     {% block 'navbar' %} 
     {% include 'includes/navbar.html' %} 
     {% endblock %}
+
+    {% block 'header' %} 
+    {% include 'includes/header.html' %} 
+    {% endblock %} 
 
     <!-- Contenido -->
     {% block content %} 

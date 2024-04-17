@@ -1,7 +1,7 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
-<section id="contact" class="container p- text-center">
+<section id="contact" class="container p-5 text-center border rounded">
   <h1>Contacto</h1>
     <form action="/contact" method="post">
         {% csrf_token %}
