@@ -1,0 +1,68 @@
+{% extends 'base.html' %} 
+{% load static %}
+
+{% block css %}
+    <link rel="stylesheet" href="{% static 'css/flan_detail.css' %}">
+{% endblock %}
+
+{% block content %} 
+<section id="detalle" class="container p-5 border rounded mb-5 bg-secondary text-white">
+    {% if flan.is_private and not user.is_authenticated %}
+        <h1>Acceso no permitido</h1>
+        <p>Para ver el detalle de este flan, tienes que estar logueado.</p>
+        <a href="{% url 'login' %}" class="btn btn-primary">Ingresar</a>
+    {%else%}
+    <div class="row">
+        <div class="col-md-6">
+            <div class="frame" style="width: 100%; height: 100%;">
+                <img src="{{ flan.image_url }}" alt="{{ flan.name }}" class="img-fluid" style="width: 100%; height: 100%; object-fit: cover;">
+            </div>
+        </div>
+        <div class="col-md-6">
+            <h1 class="highlight">{{ flan.name }}</h1>
+            <p>{{ flan.description }}</p>
+            <p>Precio: ${{ flan.price }}</p>
+            <a href="#" onclick="history.back()" class="btn btn-primary">Volver</a>
+        </div>
+    </div>
+    {%endif%}
+</section>
+
+<!-- Contenedor centrado horizontalmente -->
+<section id="otros_productos" class="container mb-5 pb-5 d-flex justify-content-center">
+    <div id="carouselProductos" class="carousel slide" data-bs-ride="carousel">
+        <h2 class="text-center mb-4 border-bottom">Otros Productos</h2>
+        <div class="carousel-inner">
+            {% for flan in otros_flanes %}
+            {% if flan.is_private and user.is_authenticated or not flan.is_private %}
+            <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <a class="text-decoration-none" href="{% url 'flanDetail' flan.id %}">
+                    <img src="{{ flan.image_url }}" class="d-block w-100 img-fluid" style="height: 300px;" alt="{{ flan.name }}">
+                    <div class="d-none d-md-block text-dark">
+                        <h5>{{ flan.name }}</h5>
+                        <p>${{ flan.price }}</p>
+                    </div>
+                </a>
+            </div>
+            {% endif %}
+            {% endfor %}
+        </div>
+        <!-- Controles de avance -->
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselProductos" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselProductos" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+    
+</section>
+
+  
+
+  
+  
+
+{% endblock %}

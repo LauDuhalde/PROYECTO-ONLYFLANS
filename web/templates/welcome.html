@@ -1,8 +1,11 @@
 {% extends 'base.html' %} 
 {% block content %}
-  <section id="productos" class="container p-5 border rounded mb-5">
-    <div class="text-center" style="border-bottom: solid">
-      <h1>Bienvenido a OnlyFlans</h1>
+  <section id="productos" class="container p-5 bg-secondary border rounded mb-5">
+    <div class="p-5 mb-4 text-white bg-dark rounded-3" style="opacity: 0.75;">
+      <div class="container-fluid py-5">
+        <h3 class="display-5 fw-bold"> Bienvenido {{ user.username }}</h3>
+        <p class="col-md-8 fs-4">¡Tenemos productos exclusivos para ti!</p>
+      </div>
     </div>
     <div class="row">
         {% for flan in flanes %}
@@ -11,8 +14,8 @@
               <img src="{{ flan.image_url }}" class="card-img-top img-fluid" alt="{{ flan.name }}" style="max-height: 150px;">
                 <div class="card-body">
                     <h5 class="card-title">{{ flan.name }}</h5>
-                    <p class="card-text">{{ flan.description }}</p>
-                    <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                    <p class="card-text">${{ flan.price }}</p>
+                    <a href="{% url "flanDetail" flan.id%}" class="btn btn-primary">Detalle</a>
                 </div>
             </div>
         </div>

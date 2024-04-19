@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Flan
 from .forms import ContactFormForm
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 
@@ -11,6 +12,7 @@ def index(request):
 def about(request):
     return render(request, 'about.html',{})
 
+@login_required
 def welcome(request):
     flanes_privados = Flan.objects.filter(is_private=True)
     return render(request, 'welcome.html',{'flanes':flanes_privados})
@@ -27,3 +29,14 @@ def contact(request):
 
 def success(request):
     return render(request, 'success.html',{})
+
+def logout_page(request):
+    return render(request, 'registration/logout.html',{})
+
+def flanDetail(request, flan_id):
+    otros_flanes = Flan.objects.exclude(id=flan_id)
+    flan = Flan.objects.get(id=flan_id)
+    return render(request, 'flan_detail.html',{'flan':flan, 'otros_flanes':otros_flanes})
+
+
+

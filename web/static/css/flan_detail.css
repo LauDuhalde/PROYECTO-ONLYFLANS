@@ -1,0 +1,24 @@
+.flan-detail-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+}
+
+.flan-image {
+    width: 300px;
+    margin-right: 20px;
+}
+
+.flan-details {
+    width: 400px;
+}
+
+.frame {
+    border: 2px solid #ccc; /* Borde de la imagen */
+    padding: 10px; /* rgb(120, 119, 119)ciado interno */
+}
+
+.highlight {
+    text-decoration: underline; /* Subrayado para el nombre del flan */
+}

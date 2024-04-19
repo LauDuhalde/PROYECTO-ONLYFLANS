@@ -1,9 +1,9 @@
 {% extends 'base.html' %} 
 {% block content %} 
 
-<section id="productos" class="container p-5 border rounded mb-5">
-  <div class="text-center" style="border-bottom: solid">
-    <h1>Nuestros Productos</h1>
+<section id="productos" class="container p-5 border rounded mb-5 bg-secondary">
+  <div class="text-center text-white">
+    <h1 class="text-decoration-underline">Nuestros Productos</h1>
   </div>
   <div class="row">
       {% for flan in flanes %}
@@ -12,13 +12,14 @@
               <img src="{{ flan.image_url }}" class="card-img-top img-fluid" alt="{{ flan.name }}" style="max-height: 150px;">
               <div class="card-body">
                   <h5 class="card-title">{{ flan.name }}</h5>
-                  <p class="card-text">{{ flan.description }}</p>
-                  <a href="#" class="btn btn-primary">Agregar al carrito</a>
+                  <p class="card-text">${{ flan.price }}</p>
+                  <a href="{% url "flanDetail" flan.id%}" class="btn btn-primary">Detalle</a>
               </div>
           </div>
       </div>
       {% endfor %}
   </div>
 </section>
+
 
 {% endblock %}

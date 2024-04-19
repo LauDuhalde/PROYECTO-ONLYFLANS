@@ -9,16 +9,21 @@ class Flan(models.Model):
     image_url = models.URLField()
     slug = models.SlugField(unique=True, blank=True)
     is_private = models.BooleanField(default=False)
+    price = models.IntegerField()
 
     def save(self, *args, **kwargs):
-        # Generar el slug automáticamente si no está definido
-        if not self.slug:
-            self.slug = slugify(self.name)
-        super().save(self,*args,**kwargs)
-        #super(Flan, self).save(*args, **kwargs) #generado
+        # Si el objeto ya existe en la base de datos, actualiza sus campos
+        if self.id:
+            super(Flan, self).save(*args, **kwargs)
+        else:
+            # Genera el slug automáticamente si no está definido
+            if not self.slug:
+                self.slug = slugify(self.name)
+            super(Flan, self).save(*args, **kwargs)
 
     def __str__(self):
         return self.name
+
     
 class ContactForm(models.Model):
     contact_form_uuid = models.UUIDField(default=uuid.uuid4, editable=False, unique=True)

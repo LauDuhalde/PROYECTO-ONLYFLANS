@@ -60,10 +60,14 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'onlyflans.urls'
 
+LOGIN_URL='login'
+LOGIN_REDIRECT_URL = 'welcome'
+LOGOUT_REDIRECT_URL = 'logout_page'
+
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [], #Si no funciona porner os.path.join(BASE_DIR, 'web/templates')
+        'DIRS': [], #Si no funciona poner os.path.join(BASE_DIR, 'web/templates')
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
