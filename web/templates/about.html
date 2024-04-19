@@ -1,28 +1,39 @@
 {% extends 'base.html' %} 
 {% block content %}
-<section id="about" class="container p-5 border rounded mb-5 bg-secondary text-white">
-  <div class="text-center">
-    <h1 class="text-decoration-underline">Acerca de nosotros</h1>
+<section id="about" class="container p-5 border rounded mb-5">
+  <div class="row">
+    <div class="col-lg-6 p-5 mb-4 bg-light rounded-3">
+      <h2 class="mb-4">¿Quiénes somos?</h2>
+      <p>
+        En OnlyFlans nos apasiona ofrecerte los mejores sabores en cada bocado. Somos una empresa joven y dinámica dedicada a la elaboración y venta de exquisitos flanes, ¡porque creemos que cada momento merece un dulce sabor!
+      </p>
+      <p>
+        Desde nuestros inicios en el año 2021 en Santiago de Chile, nos hemos esforzado por convertirnos en tu destino favorito para satisfacer tus antojos dulces. Con una ubicación privilegiada en Providencia, estamos siempre cerca para ofrecerte una experiencia de compra única.
+      </p>
+      <p>
+        En OnlyFlans, nos comprometemos a brindarte productos frescos y de la más alta calidad, elaborados con ingredientes seleccionados cuidadosamente para asegurar el máximo sabor y deleite en cada bocado.
+      </p>
+    </div>
+    <div class="col-lg-6 d-flex justify-content-center align-items-center h-100 p-5 text-white bg-secondary rounded-3">
+      {% load static %}
+      <img src="{% static 'img/quienes-somos.png' %}" alt="OnlyFlans" class="img-fluid rounded border border-5 border-dark">
+    </div>
+    
   </div>
-  <h3>¿Quiénes somos?</h3>
-  <p>
-    Somos una tienda en línea especializada en la venta de deliciosos flanes y
-    postres, hechos con los mejores ingredientes y con recetas tradicionales.
-  </p>
-  <p>
-    Nuestro sitio web ofrece una amplia variedad de productos para satisfacer
-    tus antojos de dulces, desde los clásicos flanes de vainilla hasta los más
-    extravagantes flanes de frutas exóticas.
-  </p>
-  <p>
-    En OnlyFlans, nos comprometemos a brindarte una experiencia de compra fácil
-    y segura, junto con la entrega rápida de productos frescos directamente a tu
-    puerta.
-  </p>
-  <h3>Información de la PYME</h3>
-  <p>Nombre: OnlyFlans</p>
-  <p>Fecha de Creación: Enero de 2020</p>
-  <p>Ubicación: Ciudad de Ejemplo, País de Ejemplo</p>
-  <p>Contacto: info@onlyflans.com | Teléfono: +123456789</p>
+  <div class="row mt-4">
+    <div class="col-lg-6 h-100 p-5 text-white bg-secondary rounded-3">
+      <h3>Nuestra Misión</h3>
+      <p>
+        En OnlyFlans, nuestra misión es deleitar tus sentidos con nuestros deliciosos productos y convertir cada momento en una experiencia dulce e inolvidable. Nos esforzamos por ofrecerte una amplia variedad de sabores y opciones, para que siempre encuentres el flan perfecto para ti.
+      </p>
+    </div>
+    <div class="col-lg-6 h-100 p-5 bg-light border rounded-3">
+      <h3>Nuestro Compromiso</h3>
+      <p>
+        Estamos comprometidos con la excelencia en cada paso del proceso, desde la selección de ingredientes frescos hasta la presentación de nuestros productos. Nos esforzamos por superar tus expectativas y garantizar tu satisfacción en cada compra.
+      </p>
+    </div>
+  </div>
 </section>
+
 {% endblock %}

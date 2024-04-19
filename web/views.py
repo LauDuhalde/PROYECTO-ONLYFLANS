@@ -1,4 +1,4 @@
-from django.shortcuts import render,redirect
+from django.shortcuts import render,redirect, get_object_or_404
 from .models import Flan
 from .forms import ContactFormForm
 from django.contrib.auth.decorators import login_required
@@ -35,7 +35,7 @@ def logout_page(request):
 
 def flanDetail(request, flan_id):
     otros_flanes = Flan.objects.exclude(id=flan_id)
-    flan = Flan.objects.get(id=flan_id)
+    flan = get_object_or_404(Flan, id=flan_id)
     return render(request, 'flan_detail.html',{'flan':flan, 'otros_flanes':otros_flanes})
 
 
