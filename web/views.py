@@ -2,6 +2,7 @@ from django.shortcuts import render,redirect, get_object_or_404
 from .models import Flan
 from .forms import ContactFormForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth.forms import UserCreationForm
 
 # Create your views here.
 
@@ -38,5 +39,15 @@ def flanDetail(request, flan_id):
     flan = get_object_or_404(Flan, id=flan_id)
     return render(request, 'flan_detail.html',{'flan':flan, 'otros_flanes':otros_flanes})
 
+def signup(request):
+    if request.method == 'POST':
+        form = UserCreationForm(request.POST)
+        if form.is_valid():
+            form.save()
+            return redirect('signup_success')  # Redirige a una página de éxito de registro
+    else:
+        form = UserCreationForm()
+    return render(request, 'registration/signup.html', {'form': form})
 
-
+def signup_success(request):
+    return render(request, 'registration/signup_success.html',{})

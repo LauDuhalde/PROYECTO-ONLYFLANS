@@ -16,7 +16,7 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path, include
-from web.views import index, about, welcome, contact, success,logout_page
+from web.views import index, about, welcome, contact, success,logout_page, signup, signup_success
 from web import views
 app_name = 'web'
 
@@ -30,4 +30,6 @@ urlpatterns = [
     path('accounts/', include('django.contrib.auth.urls')),  
     path('logout_page', logout_page, name="logout_page"),
     path('flan/<int:flan_id>/', views.flanDetail, name='flanDetail'),
+    path('accounts/signup', signup, name='signup'),
+    path('signup_success', signup_success, name="signup_success"),
 ]
