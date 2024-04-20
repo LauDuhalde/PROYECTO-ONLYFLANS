@@ -5,6 +5,7 @@
     <div class="mx-auto" style="max-width: 400px;">
       <form action="/contact" method="post">
         {% csrf_token %}
+        <h1 class="h3 mb-3 fw-normal">Contáctanos</h1>
         <div class="mb-3 form-floating">
           <input type="email" name="customer_email" class="form-control" id="customer_email" placeholder="name@example.com" required>
           <label for="customer_email">Correo electrónico</label>
