@@ -6,11 +6,11 @@
         {% csrf_token %}
         <h1 class="h3 mb-3 fw-normal">Registrate como cliente</h1>
       
-        <div class="form-floating">
+        <div class="form-floating mb-3">
           <input type="text" name="username" class="form-control" id="floatingUsername" placeholder="Username" required>
           <label for="floatingUsername">Nombre de usuario</label>
         </div>
-        <div class="form-floating">
+        <div class="form-floating mb-3">
             <input type="password" name="password1" class="form-control" id="floatingPassword1" placeholder="Password" required>
             <label for="floatingPassword1">Contraseña</label>
           </div>
@@ -21,7 +21,7 @@
               {% endfor %}
             </div>
           {% endif %}        
-          <div class="form-floating">
+          <div class="form-floating mb-3">
             <input type="password" name="password2" class="form-control" id="floatingPassword2" placeholder="Confirmar contraseña" required>
             <label for="floatingPassword2">Confirmar contraseña</label>
           </div>
@@ -33,7 +33,7 @@
             </div>
           {% endif %}
       
-        <button class="w-100 btn btn-lg btn-primary" type="submit">Registrarse</button>
+        <button class="w-100 btn btn-lg btn-primary mb-3" type="submit">Registrarse</button>
       </form>
 
       {{ form.password1.help_text }}
