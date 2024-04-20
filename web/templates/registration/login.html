@@ -4,9 +4,19 @@
 <section id="login" class="container p-5 text-center border rounded mb-5">
   <div class="mx-auto" style="max-width: 400px;">
     {% if form.errors %}
-    <div class="container text-center">
-      <p class"text-danger">Su nombre de usuario y contraseña no coinciden. Inténtalo de nuevo.</p>
-    </div>
+    <div class="alert alert-danger">
+      <strong>Error:</strong>
+      {% for field in form %}
+          {% for error in field.errors %}
+              {{ error }}
+          {% endfor %}
+      {% endfor %}
+      {% if form.non_field_errors %}
+          {% for error in form.non_field_errors %}
+              {{ error }}
+          {% endfor %}
+      {% endif %}
+  </div>
     {% endif %} 
     {% if next %} 
       {% if user.is_authenticated %}
