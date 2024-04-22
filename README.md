@@ -3,7 +3,11 @@
 ## Descripción
 OnlyFlans es un sitio web responsivo diseñado para presentar una amplia variedad de flanes elaborados por una pequeña empresa de pastelería. Su función principal es proporcionar a los usuarios una plataforma visual para explorar los diferentes tipos de flanes ofrecidos por la empresa. El sitio web incluye galería de productos e identificación de clientes como principales componentes. No se ofrece funcionalidad de comercio electrónico en el sitio, ya que su enfoque se centra únicamente en la presentación informativa de los productos.
 
+
+
 ## Características Base del Sitio Web
+
+Sitio web desarrollado con Django 4.2 y Bootstrap 5.0.2
 
 <details>
 <summary>Index: Galería de productos generales, que incluye una fotografia, nombre y precio.</summary>
@@ -58,6 +62,8 @@ OnlyFlans es un sitio web responsivo diseñado para presentar una amplia varieda
 ![Flan Detail](https://github.com/LauDuhalde/PROYECTO-ONLYFLANS/assets/18353596/b08f281c-142b-4ed8-afa1-759dbd3b1b56)
 
 </details>
+
+
 
 ## Problemas o Dificultades al Desarrollar el Sitio Web Base
 El principal problema con el desarrollo fue el front-end, hacer que todos los componentes se vieran de forma armónica en los diferentes dispositivos.
