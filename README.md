@@ -59,6 +59,8 @@ OnlyFlans es un sitio web responsivo diseñado para presentar una amplia varieda
 
 </details>
 
+Sitio web desarrollado con Django 4.2 y Bootstrap 5.0.2
+
 ## Problemas o Dificultades al Desarrollar el Sitio Web Base
 El principal problema con el desarrollo fue el front-end, hacer que todos los componentes se vieran de forma armónica en los diferentes dispositivos.
 
