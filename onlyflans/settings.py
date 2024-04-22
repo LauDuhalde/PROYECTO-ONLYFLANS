@@ -60,7 +60,10 @@ MIDDLEWARE = [
 
 ROOT_URLCONF = 'onlyflans.urls'
 
-
+# Configuración de autenticación
+AUTHENTICATION_BACKENDS = [
+    'django.contrib.auth.backends.ModelBackend',
+]
 
 LOGIN_URL='login'
 LOGIN_REDIRECT_URL = 'welcome'
