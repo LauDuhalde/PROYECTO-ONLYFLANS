@@ -1,7 +1,7 @@
 # Proyecto: Creación de sitio web para una PYME de venta de pasteles y postres
 
 ## Descripción
-OnlyFlans es un sitio web diseñado para presentar una amplia variedad de flanes elaborados por una pequeña empresa de pastelería. Su función principal es proporcionar a los usuarios una plataforma visual para explorar los diferentes tipos de flanes ofrecidos por la empresa. El sitio web incluye una galería de imágenes. No se ofrece funcionalidad de comercio electrónico en el sitio, ya que su enfoque se centra únicamente en la presentación informativa de los productos.
+OnlyFlans es un sitio web responsivo diseñado para presentar una amplia variedad de flanes elaborados por una pequeña empresa de pastelería. Su función principal es proporcionar a los usuarios una plataforma visual para explorar los diferentes tipos de flanes ofrecidos por la empresa. El sitio web incluye galería de productos e identificación de clientes como principales componentes. No se ofrece funcionalidad de comercio electrónico en el sitio, ya que su enfoque se centra únicamente en la presentación informativa de los productos.
 
 ## Características Base del Sitio Web
 
