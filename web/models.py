@@ -10,6 +10,7 @@ class Flan(models.Model):
     slug = models.SlugField(unique=True, blank=True)
     is_private = models.BooleanField(default=False)
     price = models.IntegerField()
+    flan_pay = models.URLField(default="https://mpago.la/2KbVDv4")
 
     def save(self, *args, **kwargs):
         # Si el objeto ya existe en la base de datos, actualiza sus campos
