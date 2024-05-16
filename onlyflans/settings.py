@@ -35,6 +35,7 @@ DEBUG = os.environ.get('DEBUG') == 'True'
 
 ALLOWED_HOSTS = ['127.0.0.1', 'https://proyecto-onlyflans.onrender.com','proyecto-onlyflans.onrender.com']
 #Para levantarlo en github dev CSRF_TRUSTED_ORIGINS = ['https://localhost:8000']
+CSRF_TRUSTED_ORIGINS = ['https://proyecto-onlyflans.onrender.com']
 
 # Application definition
 
